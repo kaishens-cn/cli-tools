@@ -1,0 +1,50 @@
+{
+  "name": "@kaiyin/cli",
+  "version": "1.0.0",
+  "description": "Cli tools",
+  "bin": {
+    "ky": "./scripts/index.js"
+  },
+  "scripts": {
+    "lint": "eslint --ext .ts src/ && prettier --check src/",
+    "lint:fix": "eslint --ext .ts src/ --fix && prettier --write src/",
+    "build": "npm run lint && node_modules/.bin/tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaishens-cn/cli-tools.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaishens-cn/cli-tools/issues"
+  },
+  "homepage": "https://github.com/kaishens-cn/cli-tools#readme",
+  "pre-commit": ["lint"],
+  "devDependencies": {
+    "@types/inquirer": "^8.2.5",
+    "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": "^5.50.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.33.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.8.3",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "clipanion": "3.1.0",
+    "colorette": "^2.0.19",
+    "core-js": "^3.27.2",
+    "debug": "^4.3.4",
+    "inquirer": "8.0.0"
+  }
+}
