@@ -3,10 +3,10 @@ import { Command, Option } from 'clipanion';
 const inquirer = require('inquirer');
 import * as chalk from 'colorette';
 import * as fs from 'fs';
+import * as path from 'path';
 
 import { debugFactory } from './debug';
-import {CACHE_PATH, getCliTemplate, pnpmInstall} from './utils';
-import * as path from 'path';
+import { CACHE_PATH, getCliTemplate, pnpmInstall } from './utils';
 
 const debug = debugFactory('create');
 
@@ -96,10 +96,15 @@ export class NewCommand extends Command {
         'https://github.com/kaishens-cn/react-web-template/archive/refs/heads/main.tar.gz',
         'react-web-template-main'
       );
-      const packageContent = JSON.parse(fs.readFileSync(path.join(path.resolve('./'), this.dirname, 'package.json'), 'utf8'));
+      const packageContent = JSON.parse(
+        fs.readFileSync(path.join(path.resolve('./'), this.dirname, 'package.json'), 'utf8')
+      );
       packageContent.name = this.name;
       packageContent.version = '1.0.0';
-      fs.writeFileSync(path.join(path.resolve('./'), this.dirname, 'package.json'), JSON.stringify(packageContent, null, 2));
+      fs.writeFileSync(
+        path.join(path.resolve('./'), this.dirname, 'package.json'),
+        JSON.stringify(packageContent, null, 2)
+      );
 
       await pnpmInstall(path.join(path.resolve('./'), this.dirname), true);
     }

@@ -1,8 +1,8 @@
+import { CommonSpawnOptions, spawn } from 'child_process';
+import * as decompress from 'decompress';
 import * as fs from 'fs';
 import fetch from 'node-fetch';
 import * as path from 'path';
-import * as decompress from 'decompress';
-import { CommonSpawnOptions, spawn } from 'child_process';
 
 export const CACHE_PATH = path.join(path.resolve('./'), '.cli-cache');
 
@@ -51,9 +51,9 @@ export const pnpmInstall = (dir: string, out?: boolean) => {
     config.stdio = 'inherit';
   }
 
-  return new Promise<void>((resolve) => {
+  return new Promise<void>(resolve => {
     const install = spawn('pnpm', ['install'], config);
-    install.on('close', (_) => {
+    install.on('close', _ => {
       resolve();
     });
   });
