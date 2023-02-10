@@ -1,9 +1,12 @@
-name: lint
+name: npm Push
 
-on: [ pull_request ]
+on:
+  push:
+    tags:
+      - 'v*'
 
 jobs:
-  lint-check:
+  build-push:
     runs-on: ubuntu-latest
 
     strategy:
@@ -24,6 +27,13 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
-      - name: lint
+      - name: Build
         run: |
-          pnpm lint
+          pnpm build
+
+      - name: Publish to npm
+        run: |
+          npm config set registry https://registry.npmjs.org
+          npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
