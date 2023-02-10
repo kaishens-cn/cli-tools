@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/kaishens-cn/cli-tools/compare/v1.0.0...v1.0.1) (2023-02-10)
+
+
+### Bug Fixes
+
+* release public package ([4f3e9e8](https://github.com/kaishens-cn/cli-tools/commit/4f3e9e8128ad508d35f1f899232ba74ff7a64ea8))
+
 ## 1.0.0 (2023-02-10)
 
 
