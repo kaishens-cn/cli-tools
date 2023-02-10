@@ -96,25 +96,26 @@ export class NewCommand extends Command {
         'https://github.com/kaishens-cn/react-web-template/archive/refs/heads/main.tar.gz',
         'react-web-template-main'
       );
-      const packageContent = JSON.parse(
-        fs.readFileSync(path.join(path.resolve('./'), this.dirname, 'package.json'), 'utf8')
-      );
-      packageContent.name = this.name;
-      packageContent.version = '1.0.0';
-      fs.writeFileSync(
-        path.join(path.resolve('./'), this.dirname, 'package.json'),
-        JSON.stringify(packageContent, null, 2)
-      );
-
-      await pnpmInstall(path.join(path.resolve('./'), this.dirname), true);
     }
 
     if (this.targets === 'desktop(electron)') {
-      // await this.createProject(
-      //   'https://github.com/kaishens-cn/react-web-template/archive/refs/heads/main.tar.gz',
-      //   'react-web-template-main'
-      // );
+      await this.createProject(
+        'https://github.com/kaishens-cn/react-electron-template/archive/refs/heads/main.tar.gz',
+        'react-electron-template-main'
+      );
     }
+
+    const packageContent = JSON.parse(
+      fs.readFileSync(path.join(path.resolve('./'), this.dirname, 'package.json'), 'utf8')
+    );
+    packageContent.name = this.name;
+    packageContent.version = '1.0.0';
+    fs.writeFileSync(
+      path.join(path.resolve('./'), this.dirname, 'package.json'),
+      JSON.stringify(packageContent, null, 2)
+    );
+
+    await pnpmInstall(path.join(path.resolve('./'), this.dirname), true);
   }
 
   private async createProject(url: string, template: string) {
