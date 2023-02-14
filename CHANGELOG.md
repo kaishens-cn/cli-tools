@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/kaishens-cn/cli-tools/compare/v1.0.2...v1.0.3) (2023-02-14)
+
+
+### CI
+
+* change npm token ([eff46ec](https://github.com/kaishens-cn/cli-tools/commit/eff46ecb56c70ca2fedd55b3e13c2d2fb9b1e984))
+
 ## [1.0.2](https://github.com/kaishens-cn/cli-tools/compare/v1.0.1...v1.0.2) (2023-02-10)
 
 
