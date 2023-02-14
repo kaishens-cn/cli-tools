@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/kaishens-cn/cli-tools/compare/v1.0.4...v1.0.5) (2023-02-14)
+
+
+### Bug Fixes
+
+* fixing missing entrances #!/usr/bin/env node ([a4f88de](https://github.com/kaishens-cn/cli-tools/commit/a4f88de4a8f319602a231cea1422d2bc4b8237f2))
+
 ## [1.0.4](https://github.com/kaishens-cn/cli-tools/compare/v1.0.3...v1.0.4) (2023-02-14)
 
 
