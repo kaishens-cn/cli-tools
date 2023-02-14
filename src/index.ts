@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import 'core-js/es/string/replace-all';
 
 import { Cli } from 'clipanion';
