@@ -1,6 +1,6 @@
 {
   "name": "@kaishens.cn/cli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Cli tools",
   "bin": {
     "ky": "./build/lib/src/index.js"

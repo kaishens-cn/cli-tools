@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/kaishens-cn/cli-tools/compare/v1.0.3...v1.0.4) (2023-02-14)
+
+
+### Bug Fixes
+
+* modify the program entrance ([77ae2d6](https://github.com/kaishens-cn/cli-tools/commit/77ae2d6897a625530ec0d34679c59593151aee9f))
+
 ## [1.0.3](https://github.com/kaishens-cn/cli-tools/compare/v1.0.2...v1.0.3) (2023-02-14)
 
 
